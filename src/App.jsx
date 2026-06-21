@@ -1,39 +1,48 @@
 import './styles/components.css'
 
-import Header from './components/Header'
-import Hero from './components/Hero'
-import Stats from './components/Stats'
-import About from './components/About'
-import Programs from './components/Programs'
-import SuccessStory from './components/SuccessStory'
-import Promises from './components/Promises'
-import EYFS from './components/EYFS'
-import Testimonials from './components/Testimonials'
-import FAQs from './components/FAQs'
-import Blog from './components/Blog'
-import FeaturedIn from './components/FeaturedIn'
-import Footer from './components/Footer'
-import FloatingActions from './components/FloatingActions'
+import { Routes, Route } from 'react-router-dom'
+
+import Layout from './components/Layout'
+import Home from './pages/Home'
+import AboutPage from './pages/AboutPage'
+import ProgramsPage from './pages/ProgramsPage'
+import ProgramDetailPage from './pages/ProgramDetailPage'
+import EyfsPage from './pages/EyfsPage'
+import PromisesPage from './pages/PromisesPage'
+import BlogPage from './pages/BlogPage'
+import FAQsPage from './pages/FAQsPage'
+import AdmissionPage from './pages/AdmissionPage'
+import NurseryFaridabadPage from './pages/NurseryFaridabadPage'
+import CentresPage from './pages/CentresPage'
+import BranchLocatorPage from './pages/BranchLocatorPage'
+import UpcomingBranchesPage from './pages/UpcomingBranchesPage'
+import FranchisePage from './pages/FranchisePage'
+import GalleryPage from './pages/GalleryPage'
+import AdminPage from './pages/AdminPage'
+import NotFoundPage from './pages/NotFoundPage'
 
 export default function App() {
   return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <Stats />
-        <About />
-        <Programs />
-        <SuccessStory />
-        <Promises />
-        <EYFS />
-        <Testimonials />
-        <FAQs />
-        <Blog />
-        <FeaturedIn />
-      </main>
-      <Footer />
-      <FloatingActions />
-    </>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/programs" element={<ProgramsPage />} />
+        <Route path="/programs/:slug" element={<ProgramDetailPage />} />
+        <Route path="/eyfs-curriculum" element={<EyfsPage />} />
+        <Route path="/promises" element={<PromisesPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/faqs" element={<FAQsPage />} />
+        <Route path="/admission" element={<AdmissionPage />} />
+        <Route path="/admission/nursery-faridabad" element={<NurseryFaridabadPage />} />
+        <Route path="/centres" element={<CentresPage />} />
+        <Route path="/centres/branch-locator" element={<BranchLocatorPage />} />
+        <Route path="/centres/upcoming" element={<UpcomingBranchesPage />} />
+        <Route path="/franchise" element={<FranchisePage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/admin" element={<AdminPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
   )
 }

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visiting Card - Little Pathshala</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+    
+    body {
+      margin: 0;
+      padding: 40px;
+      background: #f1f5f9;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    /* Print settings */
+    @media print {
+      body { background: white; padding: 0; }
+      .no-print { display: none !important; }
+      @page { margin: 0; size: auto; }
+    }
+
+    /* Standard US Business Card size: 3.5in x 2in (at 300dpi is 1050x600 px) */
+    .card {
+      width: 3.5in;
+      height: 2in;
+      background: white;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      box-sizing: border-box;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    /* --- FRONT OF CARD --- */
+    .card-front {
+      background: linear-gradient(135deg, #6b21a8, #9333ea);
+      color: white;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+    .front-logo {
+      width: 64px;
+      height: 64px;
+      background: white;
+      border-radius: 50%;
+      margin-bottom: 12px;
+      padding: 4px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .front-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: 0.5px;
+    }
+    .front-subtitle {
+      font-size: 8px;
+      color: #fcd34d;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    /* --- BACK OF CARD --- */
+    .card-back {
+      background: white;
+      border: 1px solid #ddd;
+      padding: 0.25in;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .back-header {
+      border-bottom: 2px solid #fcd34d;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+    .name {
+      color: #6b21a8;
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0;
+    }
+    .title {
+      color: #64748b;
+      font-size: 10px;
+      margin: 2px 0 0 0;
+      font-weight: 600;
+    }
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 9px;
+      color: #334155;
+      line-height: 1.3;
+    }
+    .info-icon {
+      font-size: 10px;
+      margin-top: 1px;
+    }
+    
+    .wave {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 60px;
+      height: 60px;
+      background: #fcd34d;
+      border-radius: 100% 0 0 0;
+      z-index: 0;
+      opacity: 0.2;
+    }
+
+    .instructions {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      max-width: 400px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    .print-btn {
+      background: #6b21a8;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="instructions no-print">
+    <h2 style="margin-top: 0; color: #6b21a8;">Printable Visiting Card</h2>
+    <p style="color: #64748b; font-size: 14px;">Because AI image generators cannot output exact spelling, I have coded a pixel-perfect, high-resolution printable card for you!</p>
+    <button class="print-btn" onclick="window.print()">🖨️ Print to PDF</button>
+  </div>
+
+  <!-- Front -->
+  <div class="card card-front">
+    <img class="front-logo" src="public/assets/minion_cropped.png" alt="Logo">
+    <h1 class="front-title">Little Pathshala</h1>
+    <div class="front-subtitle">PRESCHOOL & DAYCARE</div>
+  </div>
+
+  <!-- Back -->
+  <div class="card card-back">
+    <div class="wave"></div>
+    <div class="back-header" style="position: relative; z-index: 1;">
+      <h2 class="name">Shubham</h2>
+      <p class="title">LITTLE PATHSHALA TEAM</p>
+    </div>
+    
+    <div class="info-list" style="position: relative; z-index: 1;">
+      <div class="info-item">
+        <span class="info-icon">📞</span>
+        <span>+91 9718463321</span>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">✉️</span>
+        <span>hello@littlepathshala.com</span>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">📍</span>
+        <span>H.No 32, Surya Vihar, Sector 91,<br>Faridabad, Haryana 121003</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

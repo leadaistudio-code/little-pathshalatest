@@ -1,11 +1,5 @@
-const petals = [
-  { cls: 'p1', icon: '📖', label: 'Literacy' },
-  { cls: 'p2', icon: '🔢', label: 'Mathematics' },
-  { cls: 'p3', icon: '🌍', label: 'Understanding the World' },
-  { cls: 'p4', icon: '🎨', label: 'Expressive Arts' },
-  { cls: 'p5', icon: '💬', label: 'Communication' },
-  { cls: 'p6', icon: '😊', label: 'Personal & Social' },
-]
+import { Link } from 'react-router-dom'
+import EyfsTree from './EyfsTree'
 
 export default function EYFS() {
   return (
@@ -16,30 +10,27 @@ export default function EYFS() {
           <h2 style={{ fontSize: 38 }}>
             UK based <span style={{ color: 'var(--yellow-600)' }}>EYFS Curriculum</span>
           </h2>
-          <p style={{ color: 'var(--gray-700)' }}>
-            Little Pathshala accentuates the <strong>UK-based Early Years Foundation Stage (EYFS)</strong> curriculum
-            for the holistic and brain development of your child — proven, research-backed, and joyful.
+          <p className="paragraph-text" style={{ fontSize: 16, color: 'var(--gray-700)', lineHeight: 1.6, marginBottom: 24 }}>
+            <strong>Little Pathshala champions the UK-based Early Years Foundation Stage (EYFS) Curriculum to ensure the complete holistic and cognitive development of your child.</strong>
           </p>
 
-          <ul className="eyfs-list">
-            <li><span className="check">✓</span><span>Lifetime of learning experiences for every child</span></li>
-            <li><span className="check">✓</span><span>Cultivates admiration for creating, learning, discovering, and exploring</span></li>
-            <li><span className="check">✓</span><span>Focuses on 7 key areas of child development</span></li>
+          <ul className="list-unstyled p-0 eyfs-list" style={{ listStyle: 'none', padding: 0, margin: '0 0 32px 0', display: 'flex', flexDirection: 'column', gap: 12 }}>
+            <li style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
+              <span style={{ color: 'var(--purple-600)' }}>✔</span> A lifetime of meaningful learning experiences
+            </li>
+            <li style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
+              <span style={{ color: 'var(--purple-600)' }}>✔</span> Cultivates a lifelong passion for exploring, creating, and discovering
+            </li>
+            <li style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
+              <span style={{ color: 'var(--purple-600)' }}>✔</span> Structured focus on the 7 key areas of early childhood development
+            </li>
             <li><span className="check">✓</span><span>Personalized learning plan for every child's unique pace</span></li>
           </ul>
 
-          <a className="btn btn-secondary" href="#programs">Get Details →</a>
+          <Link className="btn btn-secondary" to="/eyfs-curriculum">Get Details →</Link>
         </div>
 
-        <div className="eyfs-diagram" aria-hidden="true">
-          {petals.map(p => (
-            <div className={`eyfs-petal ${p.cls}`} key={p.cls}>
-              <span className="icon">{p.icon}</span>
-              {p.label}
-            </div>
-          ))}
-          <div className="eyfs-center">EYFS</div>
-        </div>
+        <EyfsTree />
       </div>
     </section>
   )

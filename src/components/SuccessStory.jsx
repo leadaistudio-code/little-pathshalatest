@@ -10,13 +10,13 @@ export default function SuccessStory() {
             <div className="success-quote">
               <span className="bull" />
               <p style={{ margin: 0 }}>
-                An incredible <strong>93%</strong> of our parents love to recommend Little Pathshala to their friends and family.
+                An outstanding <strong>93.2%</strong> of our parents enthusiastically recommend Little Pathshala to their friends and family.
               </p>
             </div>
             <div className="success-quote">
               <span className="bull" />
               <p style={{ margin: 0 }}>
-                <strong>78%</strong> of parents witness a remarkable boost in their child's language development and confidence within two months.
+                <strong>75%</strong> of parents notice a remarkable improvement in their child's language skills and confidence within just two months.
               </p>
             </div>
             <div className="success-quote">
@@ -30,8 +30,8 @@ export default function SuccessStory() {
 
         <div>
           <div className="success-bars">
-            <div className="bar b1" data-pct="93%" />
-            <div className="bar b2" data-pct="78%" />
+            <div className="bar b1" data-pct="93.2%" />
+            <div className="bar b2" data-pct="75%" />
           </div>
           <div style={{ textAlign: 'center', marginTop: 14, color: 'var(--gray-600)', fontWeight: 600 }}>
             Year — 2025

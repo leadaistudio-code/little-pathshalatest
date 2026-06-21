@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Hero() {
   return (
     <section className="hero" id="home">
@@ -10,35 +12,32 @@ export default function Hero() {
             </span>
 
             <h1>
-              Best Preschool & <br />
-              <span className="accent">Daycare for</span> Future Leaders
+              India's Premier Preschool & <br />
+              <span className="accent">Daycare</span> Chain
             </h1>
 
-            <p className="hero-sub">A magical place where learning is an adventure ✨</p>
+            <p className="hero-sub">Highly Awarded Brand.</p>
 
             <div className="hero-bullets">
-              <span className="bullet"><span className="live">LIVE</span> CCTV Streaming</span>
-              <span className="bullet">📚 EYFS Curriculum</span>
-              <span className="bullet">🛡️ 100% Safe Campus</span>
+              <span className="bullet"><span className="live">LIVE</span> Real-Time CCTV</span>
+              <span className="bullet">📚 UK-Based EYFS</span>
             </div>
 
             <div className="hero-meta">
               <span>🕒 8:30 AM – 6:00 PM</span>
               <span className="pipe">|</span>
-              <span>👶 6 Months+ Children</span>
-              <span className="pipe">|</span>
-              <span>👩‍🏫 Trained Educators</span>
+              <span>👶 6 Months & Above</span>
             </div>
 
             <div className="hero-actions">
-              <a className="btn btn-primary" href="#admission">Enroll Now →</a>
-              <a className="btn btn-secondary" href="#programs">View Programs</a>
+              <Link className="btn btn-primary" to="/admission">Enroll Now →</Link>
+              <Link className="btn btn-secondary" to="/programs">View Programs</Link>
             </div>
           </div>
 
           <div className="hero-art">
-            <div className="hero-art-blob">
-              <span className="hero-art-emoji" role="img" aria-label="Happy child">🧒</span>
+            <div className="hero-art-blob" style={{ background: 'none', overflow: 'hidden' }}>
+              <img className="hero-real-image" src="/assets/activity.jpg" alt="Happy child learning" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
             </div>
             <div className="hero-floats">
               <div className="float float-1">

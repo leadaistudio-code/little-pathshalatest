@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const faqs = [
+export const faqs = [
   {
     q: 'What age is required for my child to enroll in Little Pathshala?',
     a: 'We provide programs for children from 6 months onwards. We believe early childhood education of the highest caliber gives children the finest start in life. At Little Pathshala, we assist children in becoming lifelong learners and empower achievement and confidence in them.',
@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: 'Is the campus safe? What safety measures are in place?',
-    a: '24/7 CCTV with live parent feed, biometric entry, vaccinated and background-verified staff, child-safe furniture, fire & evacuation drills, on-site nurse, and a 1:8 teacher-student ratio for full attention.',
+    a: '24/7 CCTV with live parent feed, biometric entry, vaccinated and background-verified staff, child-safe furniture, fire & evacuation drills, on-site nurse, and a 1:15 teacher-student ratio for full attention.',
   },
 ]
 

@@ -1,21 +1,21 @@
 const reviews = [
   {
+    name: 'Gaurav Gaba',
+    role: 'Parent',
+    initials: 'GG',
+    text: '"I enrolled my 6-month-old child after researching several daycares in the area. Little Pathshala was by far the best in terms of cleanliness and staff professionalism. They provide incredible quality and care at a very reasonable price. Hoping to see more branches soon!"',
+  },
+  {
+    name: 'Surbhi Takkar',
+    role: 'Parent',
+    initials: 'ST',
+    text: '"My daughter has been attending Little Pathshala for almost three months now. The teachers are incredibly enthusiastic and truly want to see their students succeed. I’ve noticed a significant improvement in my child’s confidence. I’m so glad I chose them for my kid!"',
+  },
+  {
     name: 'Priya Sharma',
     role: 'Mother of Aarav (4 yrs)',
     initials: 'PS',
-    text: '"Little Pathshala has been a blessing for our family! Aarav looks forward to school every single day. The teachers are so caring and the activities are perfectly designed for his age. We\'ve seen tremendous growth in his confidence and social skills."',
-  },
-  {
-    name: 'Rajesh Kumar',
-    role: 'Father of Ananya (3 yrs)',
-    initials: 'RK',
-    text: '"As working parents, we were worried about finding the right preschool. Little Pathshala exceeded all our expectations! The daily updates, safe environment, and nurturing teachers give us complete peace of mind. Ananya is thriving here!"',
-  },
-  {
-    name: 'Meera Patel',
-    role: 'Mother of Riya (5 yrs)',
-    initials: 'MP',
-    text: '"The holistic approach to learning at Little Pathshala is remarkable. Riya has developed not just academically but also emotionally and socially. The school readiness program prepared her beautifully for primary school. Highly recommended!"',
+    text: '"The holistic approach to learning here is remarkable. Aarav looks forward to school every single day. The teachers are so caring and the activities are perfectly designed for his age. We\'ve seen tremendous growth in his social skills."',
   },
 ]
 

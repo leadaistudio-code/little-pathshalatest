@@ -1,8 +1,8 @@
 const stats = [
-  { icon: '👨‍👩‍👧', num: '500+', label: 'Happy Families' },
-  { icon: '🏫', num: '5+',  label: 'Centres' },
-  { icon: '🏆', num: '25+', label: 'Awards Won' },
-  { icon: '⏳', num: '12+', label: 'Years of Trust' },
+  { icon: '👨‍👩‍👧', num: '22,000+', label: 'Proud Parents' },
+  { icon: '🏫', num: '35+',  label: 'Active Centres' },
+  { icon: '🏆', num: '72+', label: 'Prestigious Awards' },
+  { icon: '⏳', num: '22+', label: 'Years of Excellence' },
 ]
 
 export default function Stats() {

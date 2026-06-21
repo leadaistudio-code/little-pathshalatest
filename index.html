@@ -2,16 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Little Pathshala — India's nurturing preschool & daycare. Play-based learning, Montessori methodology, safe campus, and trusted by 500+ families since 2013." />
-    <title>Little Pathshala — Nurturing Future Leaders</title>
+
+    <!-- Icons & PWA -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#7c3aed" />
+
+    <!-- Local / geo signals -->
+    <meta name="author" content="Little Pathshala" />
+    <meta name="geo.region" content="IN-HR" />
+    <meta name="geo.placename" content="Faridabad" />
+    <meta name="geo.position" content="28.3920;77.3470" />
+    <meta name="ICBM" content="28.3920, 77.3470" />
+
+    <!-- Default title/description (replaced per-page during prerender by react-helmet) -->
+    <title>Little Pathshala — Preschool &amp; Daycare in Faridabad</title>
+    <meta name="description" content="Little Pathshala is an award-winning preschool & daycare in Sector 91, Faridabad. Play-based & EYFS learning, live CCTV, safe campus — trusted by 500+ families since 2013." />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Sitewide structured data (injected at build time) -->
+    <!--sitewide-schema-->
+    <!-- Per-page SEO tags (injected at build time) -->
+    <!--app-head-->
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><!--app-html--></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

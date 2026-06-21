@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -5,10 +7,12 @@ export default function Footer() {
         <div className="footer-grid">
           <div>
             <div className="footer-brand">
-              <div className="brand-logo">LP</div>
+              <div className="animated-logo" style={{ width: 64, height: 64, borderRadius: '50%', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', border: '2px solid rgba(255,255,255,0.2)', flexShrink: 0 }}>
+                <img src="/assets/minion_cropped.png" alt="Little Pathshala Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
               <div className="brand-text">
                 <span className="brand-name">Little Pathshala</span>
-                <span className="brand-tag" style={{ color: 'rgba(255,255,255,.6)' }}>PRESCHOOL & DAYCARE</span>
+                <span className="brand-tag" style={{ color: 'rgba(255,255,255,.6)' }}>INTERNATIONAL PRE SCHOOL AND DAYCARE</span>
               </div>
             </div>
             <p className="footer-about">
@@ -16,9 +20,9 @@ export default function Footer() {
               A magical place where every child falls in love with learning.
             </p>
             <div className="footer-socials">
-              <a className="social" href="#" aria-label="Facebook">f</a>
-              <a className="social" href="#" aria-label="Instagram">📷</a>
-              <a className="social" href="#" aria-label="YouTube">▶</a>
+              <a className="social" href="https://www.facebook.com/profile.php?id=61585748780576" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+              <a className="social" href="https://www.instagram.com/little.pathshala?igsh=MXZqMmN3dmN6YWNjcA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📷</a>
+              <a className="social" href="https://youtube.com/@littlepathshala37" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶</a>
               <a className="social" href="#" aria-label="LinkedIn">in</a>
               <a className="social" href="#" aria-label="X">𝕏</a>
             </div>
@@ -27,24 +31,26 @@ export default function Footer() {
           <div>
             <h4>Quick Links</h4>
             <ul>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#programs">Our Programs</a></li>
-              <li><a href="#promises">Our Promises</a></li>
-              <li><a href="#blog">Latest Blog</a></li>
-              <li><a href="#faq">FAQs</a></li>
-              <li><a href="#admission">Admission</a></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/programs">Our Programs</Link></li>
+              <li><Link to="/eyfs-curriculum">EYFS Curriculum</Link></li>
+              <li><Link to="/centres">Our Centres</Link></li>
+              <li><Link to="/franchise">Franchise</Link></li>
+              <li><Link to="/promises">Our Promises</Link></li>
+              <li><Link to="/blog">Latest Blog</Link></li>
+              <li><Link to="/faqs">FAQs</Link></li>
+              <li><Link to="/admission">Admission</Link></li>
             </ul>
           </div>
 
           <div>
             <h4>Programs</h4>
             <ul>
-              <li><a href="#programs">Play Group</a></li>
-              <li><a href="#programs">Nursery</a></li>
-              <li><a href="#programs">LKG / UKG</a></li>
-              <li><a href="#programs">Daycare</a></li>
-              <li><a href="#programs">After-School Care</a></li>
-              <li><a href="#programs">Summer Camp 2026</a></li>
+              <li><Link to="/programs/play-group">Play Group</Link></li>
+              <li><Link to="/programs/nursery">Nursery</Link></li>
+              <li><Link to="/programs/lkg">LKG</Link></li>
+              <li><Link to="/programs/ukg">UKG</Link></li>
+              <li><Link to="/programs/daycare">Daycare & Crèche</Link></li>
             </ul>
           </div>
 

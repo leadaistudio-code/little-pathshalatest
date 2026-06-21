@@ -5,10 +5,8 @@ const promises = [
   { icon: '🛡️', title: 'Child Safety & Hygiene', desc: 'From vaccinated staff and face recognition to LIVE CCTV — top priority on safety and hygiene.' },
   { icon: '🧠', title: 'Brain Aptitude Test', desc: 'Discover each child\'s unique potential with a multiple-intelligence aptitude test that informs the curriculum.' },
   { icon: '🤝', title: 'Parent Bonding', desc: 'A unique binding exercise that conquers separation anxiety for both parent and child.' },
-  { icon: '⏸️', title: 'Pause Policy', desc: 'Pause your child\'s services hassle-free if they stay away for 30 days or more — no fees lost.' },
   { icon: '🥗', title: 'Nutritionist Meal Plans', desc: 'Four regional & seasonal meal plans, all pre-planned by a certified child nutritionist.' },
   { icon: '📱', title: 'Parents App Updates', desc: 'A one-stop app for LIVE feed, meals, naps, performance, and everything a parent needs to know.' },
-  { icon: '✅', title: 'Not Satisfied? Don\'t Pay', desc: 'If a parent is genuinely not satisfied with their child\'s progress in a day, the fee is reimbursed.' },
 ]
 
 export default function Promises() {
@@ -21,7 +19,7 @@ export default function Promises() {
             Our <span className="hl">Promises</span>
           </h2>
           <p className="section-subtitle">
-            Ten unwavering commitments we keep to every parent who trusts us with their child.
+            The unwavering commitments we keep to every parent who trusts us with their child.
           </p>
         </div>
 

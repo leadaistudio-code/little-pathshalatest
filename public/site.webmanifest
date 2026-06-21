@@ -1,0 +1,12 @@
+{
+  "name": "Little Pathshala — Preschool & Daycare",
+  "short_name": "Little Pathshala",
+  "description": "Award-winning preschool & daycare in Sector 91, Faridabad.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#7c3aed",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
