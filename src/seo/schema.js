@@ -34,6 +34,25 @@ export function localBusinessSchema() {
       latitude: SITE.geo.lat,
       longitude: SITE.geo.lng,
     },
+    ...(SITE.rating && {
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: SITE.rating.value,
+        reviewCount: SITE.rating.count,
+        bestRating: '5',
+        worstRating: '1',
+      },
+    }),
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Programs',
+      itemListElement: [
+        'Play Group', 'Pre-Nursery', 'Nursery', 'LKG', 'UKG', 'Daycare & Crèche',
+      ].map((name) => ({
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name: `${name} in Faridabad` },
+      })),
+    },
     areaServed: SITE.areaServed.map((name) => ({ '@type': 'Place', name })),
     openingHoursSpecification: SITE.hours.map((h) => ({
       '@type': 'OpeningHoursSpecification',
@@ -90,6 +109,32 @@ export function breadcrumbSchema(trail) {
       name: item.name,
       item: abs(item.path),
     })),
+  }
+}
+
+// Per-program Course schema — helps each program page rank for its keyword.
+export function courseSchema(program) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: `${program.title} in Faridabad`,
+    description: program.tagline,
+    provider: {
+      '@type': 'Preschool',
+      name: SITE.name,
+      sameAs: SITE.url,
+    },
+    audience: {
+      '@type': 'EducationalAudience',
+      educationalRole: 'student',
+    },
+    locationCreated: { '@type': 'Place', name: 'Faridabad, Haryana' },
+    offers: {
+      '@type': 'Offer',
+      category: 'Early Childhood Education',
+      availability: 'https://schema.org/InStock',
+      areaServed: 'Faridabad',
+    },
   }
 }
 

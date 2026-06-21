@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 import Seo from '../seo/Seo'
-import { breadcrumbSchema } from '../seo/schema'
+import { breadcrumbSchema, courseSchema } from '../seo/schema'
 import { programBySlug } from '../data/programs'
 import ProgramDetail from '../components/ProgramDetail'
 import NotFoundPage from './NotFoundPage'
@@ -24,6 +24,7 @@ export default function ProgramDetailPage() {
             { name: 'Our Programs', path: '/programs' },
             { name: program.title, path: `/programs/${program.slug}` },
           ]),
+          courseSchema(program),
         ]}
       />
       <ProgramDetail program={program} />

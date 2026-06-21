@@ -152,7 +152,7 @@ export default function Gallery() {
       <div className="gallery-grid">
         {filteredImages.map((img, i) => (
           <div key={img.id || i} className="gallery-item" style={{ position: 'relative' }}>
-            <img src={img.image_url || img.src} alt={`Little Pathshala ${img.category} ${i + 1}`} loading="lazy" />
+            <img src={img.image_url || img.src} alt={`Little Pathshala preschool & daycare in Faridabad — ${img.category} photo ${i + 1}`} loading="lazy" />
             
             {isAdmin && img.id && (
               <button 

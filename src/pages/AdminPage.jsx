@@ -44,7 +44,7 @@ export default function AdminPage() {
 
   return (
     <div className="container" style={{ paddingTop: '120px', paddingBottom: '60px', maxWidth: '400px', margin: '0 auto' }}>
-      <Seo title="Admin Login" />
+      <Seo title="Admin Login" path="/admin" noindex />
       <div style={{ background: '#fff', padding: '32px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
         <h2 style={{ marginBottom: '24px', textAlign: 'center' }}>Admin Login</h2>
         <p style={{ textAlign: 'center', marginBottom: '24px', color: 'var(--gray-600)' }}>Log in to edit the gallery directly on the website.</p>

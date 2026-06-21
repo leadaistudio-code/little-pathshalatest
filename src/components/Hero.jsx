@@ -12,11 +12,11 @@ export default function Hero() {
             </span>
 
             <h1>
-              India's Premier Preschool & <br />
-              <span className="accent">Daycare</span> Chain
+              Best Preschool & <span className="accent">Daycare</span><br />
+              in Faridabad
             </h1>
 
-            <p className="hero-sub">Highly Awarded Brand.</p>
+            <p className="hero-sub">Play Group, Nursery, LKG &amp; UKG — Sector 91, Faridabad. Trusted since 2013.</p>
 
             <div className="hero-bullets">
               <span className="bullet"><span className="live">LIVE</span> Real-Time CCTV</span>
@@ -37,7 +37,7 @@ export default function Hero() {
 
           <div className="hero-art">
             <div className="hero-art-blob" style={{ background: 'none', overflow: 'hidden' }}>
-              <img className="hero-real-image" src="/assets/activity.jpg" alt="Happy child learning" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
+              <img className="hero-real-image" src="/assets/activity.jpg" alt="Children learning through play at Little Pathshala preschool & daycare in Sector 91, Faridabad" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
             </div>
             <div className="hero-floats">
               <div className="float float-1">

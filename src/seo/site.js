@@ -13,6 +13,10 @@ export const SITE = {
   phone: '+91 9718463321',
   phoneE164: '+919718463321',
   priceRange: '₹₹',
+
+  // ⚠️ Update these with your REAL Google review numbers to stay within
+  // Google's review-snippet guidelines (fake ratings can get you penalised).
+  rating: { value: '4.9', count: '127' },
   ogImage: '/og-image.jpg', // 1200x630 — add this file to /public for rich social previews
   locale: 'en_IN',
 

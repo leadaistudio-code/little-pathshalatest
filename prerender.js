@@ -35,7 +35,19 @@ const routes = [
   '/centres/branch-locator',
   '/centres/upcoming',
   '/franchise',
+  '/gallery',
 ]
+
+// Per-route sitemap hints (default applied when not listed).
+const SITEMAP_META = {
+  '/': { priority: '1.0', changefreq: 'weekly' },
+  '/programs': { priority: '0.9', changefreq: 'monthly' },
+  '/admission': { priority: '0.9', changefreq: 'weekly' },
+  '/admission/nursery-faridabad': { priority: '0.9', changefreq: 'weekly' },
+  '/centres': { priority: '0.8', changefreq: 'monthly' },
+  '/eyfs-curriculum': { priority: '0.8', changefreq: 'monthly' },
+}
+const SITE_URL = 'https://littlepathshala.com'
 
 async function run() {
   const template = fs.readFileSync(path.join(distDir, 'index.html'), 'utf-8')
@@ -73,7 +85,27 @@ async function run() {
     console.log('  ✓ prerendered 404 -> dist\\404.html')
   }
 
-  console.log(`\nPrerendered ${routes.length} routes + 404.`)
+  // sitemap.xml — generated from the same route list so it never goes stale.
+  const lastmod = new Date().toISOString().slice(0, 10)
+  const urls = routes
+    .map((route) => {
+      const meta = SITEMAP_META[route] || { priority: '0.7', changefreq: 'monthly' }
+      const path = route === '/' ? '/' : `${route}/`
+      return [
+        '  <url>',
+        `    <loc>${SITE_URL}${path}</loc>`,
+        `    <lastmod>${lastmod}</lastmod>`,
+        `    <changefreq>${meta.changefreq}</changefreq>`,
+        `    <priority>${meta.priority}</priority>`,
+        '  </url>',
+      ].join('\n')
+    })
+    .join('\n')
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`
+  fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemap)
+  console.log(`  ✓ generated sitemap.xml (${routes.length} urls)`)
+
+  console.log(`\nPrerendered ${routes.length} routes + 404 + sitemap.`)
 }
 
 run().catch((err) => {

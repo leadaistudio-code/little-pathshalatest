@@ -24,10 +24,10 @@ export default function About() {
           <div>
             <h3 style={{ fontSize: 28, marginBottom: 18 }}>About Little Pathshala</h3>
             <p style={{ color: 'var(--gray-700)', fontSize: 16 }}>
-              For over 22 years, <strong>Little Pathshala</strong> has proudly stood as a leader in Early Childhood Education and Daycare across India. Our legacy is built upon nurturing inquisitive young minds through hands-on, experiential learning that helps them understand the world around them.
+              Since 2013, <strong>Little Pathshala</strong> has been a trusted name in early childhood education and daycare in Faridabad. Based in Sector 91, we nurture inquisitive young minds through hands-on, experiential, play-based learning that helps them understand the world around them.
             </p>
             <p style={{ color: 'var(--gray-700)', fontSize: 16 }}>
-              Driven by the EYFS methodology, our curriculum centers on imagination and creativity to foster the holistic growth of every child from daycare through kindergarten.
+              Driven by the UK-based EYFS curriculum, our Play Group, Nursery, LKG and UKG programs centre on imagination and creativity to foster the holistic growth of every child — from daycare through kindergarten.
             </p>
 
             <div className="about-features">
@@ -45,10 +45,10 @@ export default function About() {
           </div>
 
           <div className="about-image-grid">
-            <div className="about-image yellow p-0" style={{overflow: 'hidden'}}><img src="/assets/poster2.jpg" alt="Kids" style={{width: '100%', height: '100%', objectFit: 'cover'}} /></div>
-            <div className="about-image purple tall p-0" style={{overflow: 'hidden'}}><img src="/assets/teacher.jpg" alt="Teacher" style={{width: '100%', height: '100%', objectFit: 'cover'}} /></div>
-            <div className="about-image pink tall p-0" style={{overflow: 'hidden'}}><img src="/assets/poster1.jpg" alt="Playing" style={{width: '100%', height: '100%', objectFit: 'cover'}} /></div>
-            <div className="about-image green p-0" style={{overflow: 'hidden'}}><img src="/assets/minion.jpg" alt="Minion" style={{width: '100%', height: '100%', objectFit: 'cover'}} /></div>
+            <div className="about-image yellow p-0" style={{overflow: 'hidden'}}><img src="/assets/poster2.jpg" alt="Preschool children at Little Pathshala Faridabad" style={{width: '100%', height: '100%', objectFit: 'cover'}} /></div>
+            <div className="about-image purple tall p-0" style={{overflow: 'hidden'}}><img src="/assets/teacher.jpg" alt="Caring preschool teacher with a child in Faridabad" style={{width: '100%', height: '100%', objectFit: 'cover'}} /></div>
+            <div className="about-image pink tall p-0" style={{overflow: 'hidden'}}><img src="/assets/poster1.jpg" alt="Kids enjoying play-based learning at Little Pathshala daycare" style={{width: '100%', height: '100%', objectFit: 'cover'}} /></div>
+            <div className="about-image green p-0" style={{overflow: 'hidden'}}><img src="/assets/minion.jpg" alt="Fun activities at Little Pathshala preschool, Sector 91 Faridabad" style={{width: '100%', height: '100%', objectFit: 'cover'}} /></div>
           </div>
         </div>
 
