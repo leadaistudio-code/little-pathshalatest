@@ -1222,6 +1222,43 @@
 }
 
 /* ============================================
+   GOOGLE REVIEWS WIDGET
+   ============================================ */
+.greviews-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 880px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  padding: 24px 32px;
+}
+.greviews-summary .google-badge { font-size: 22px; }
+.grs-left { display: flex; align-items: baseline; gap: 8px; }
+.grs-reviews-word { font-weight: 700; color: var(--gray-600); font-size: 18px; }
+.grs-rating { display: flex; align-items: center; gap: 14px; }
+.grs-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 1;
+  color: var(--purple-700);
+}
+.grs-rating .stars { font-size: 20px; letter-spacing: 2px; }
+.grs-count { font-size: 13px; color: var(--gray-500); margin-top: 2px; }
+.grs-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+@media (max-width: 760px) {
+  .greviews-summary { flex-direction: column; text-align: center; align-items: center; }
+  .grs-actions { justify-content: center; }
+}
+
+/* ============================================
    PROMO BANNER (above hero)
    ============================================ */
 .promo-banner {

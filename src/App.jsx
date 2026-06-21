@@ -10,6 +10,7 @@ import ProgramDetailPage from './pages/ProgramDetailPage'
 import EyfsPage from './pages/EyfsPage'
 import PromisesPage from './pages/PromisesPage'
 import BlogPage from './pages/BlogPage'
+import BlogPostPage from './pages/BlogPostPage'
 import FAQsPage from './pages/FAQsPage'
 import AdmissionPage from './pages/AdmissionPage'
 import NurseryFaridabadPage from './pages/NurseryFaridabadPage'
@@ -32,6 +33,7 @@ export default function App() {
         <Route path="/eyfs-curriculum" element={<EyfsPage />} />
         <Route path="/promises" element={<PromisesPage />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/faqs" element={<FAQsPage />} />
         <Route path="/admission" element={<AdmissionPage />} />
         <Route path="/admission/nursery-faridabad" element={<NurseryFaridabadPage />} />

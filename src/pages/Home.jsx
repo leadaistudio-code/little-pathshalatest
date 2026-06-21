@@ -7,7 +7,7 @@ import Programs from '../components/Programs'
 import SuccessStory from '../components/SuccessStory'
 import Promises from '../components/Promises'
 import EYFS from '../components/EYFS'
-import Testimonials from '../components/Testimonials'
+import GoogleReviews from '../components/GoogleReviews'
 import FAQs from '../components/FAQs'
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
       <SuccessStory />
       <Promises />
       <EYFS />
-      <Testimonials />
+      <GoogleReviews />
       <FAQs />
     </>
   )

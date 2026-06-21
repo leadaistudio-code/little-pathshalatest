@@ -10,6 +10,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { blogPosts } from './src/data/blogPosts.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const distDir = path.join(__dirname, 'dist')
@@ -36,6 +37,7 @@ const routes = [
   '/centres/upcoming',
   '/franchise',
   '/gallery',
+  ...blogPosts.map((p) => `/blog/${p.slug}`),
 ]
 
 // Per-route sitemap hints (default applied when not listed).

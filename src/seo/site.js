@@ -17,6 +17,10 @@ export const SITE = {
   // ⚠️ Update these with your REAL Google review numbers to stay within
   // Google's review-snippet guidelines (fake ratings can get you penalised).
   rating: { value: '4.9', count: '127' },
+
+  // ⚠️ Replace with your Google Business Profile review link (the "Write a review"
+  // short link from your GBP dashboard, e.g. https://g.page/r/XXXX/review).
+  googleReviewsUrl: 'https://www.google.com/search?q=Little+Pathshala+Preschool+Daycare+Faridabad+reviews',
   ogImage: '/og-image.jpg', // 1200x630 — add this file to /public for rich social previews
   locale: 'en_IN',
 

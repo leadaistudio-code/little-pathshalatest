@@ -138,6 +138,26 @@ export function courseSchema(program) {
   }
 }
 
+// Blog article (BlogPosting) rich result.
+export function articleSchema(post) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: { '@type': 'Organization', name: SITE.name },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE.name,
+      logo: { '@type': 'ImageObject', url: abs('/favicon.svg') },
+    },
+    mainEntityOfPage: abs(`/blog/${post.slug}/`),
+    inLanguage: 'en-IN',
+  }
+}
+
 // FAQ rich result.
 export function faqSchema(faqs) {
   return {
